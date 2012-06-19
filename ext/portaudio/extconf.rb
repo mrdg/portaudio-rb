@@ -13,4 +13,4 @@ unless find_library('portaudio', 'Pa_Initialize')
   abort "libportaudio is missing.  please install libportaudio"
 end
 
-create_makefile('portaudio/portaudio')
+create_makefile('portaudio')

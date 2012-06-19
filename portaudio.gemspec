@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
 
   s.authors  = ["Menno de Gier"]
   s.email    = 'mrdegier@gmail.com'
-  s.homepage = 'https://github.com/mrdg/portaudio'
+  s.homepage = 'https://github.com/mrdg/portaudio-rb'
 
   s.add_development_dependency 'rake-compiler'
   s.files         = `git ls-files`.split($\)

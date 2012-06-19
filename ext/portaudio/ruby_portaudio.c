@@ -24,7 +24,7 @@ static VALUE sample_rate()
 }
 
 
-void Init_portaudio() 
+void Init_portaudio()
 {
     mPortAudio = rb_define_module("PortAudio");
     cPortAudioError = rb_define_class_under(mPortAudio, "Error", rb_eException);

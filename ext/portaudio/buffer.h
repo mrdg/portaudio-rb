@@ -6,5 +6,6 @@
 void Init_buffer();
 
 float * get_samples();
+int get_buffer_size(VALUE buffer);
 
 #endif

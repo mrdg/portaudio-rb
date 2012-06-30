@@ -3,6 +3,12 @@ require 'portaudio'
 
 class PortAudioTest < Test::Unit::TestCase
 
+  def test_buffer_size
+    size = 512
+    buffer = PortAudio::Buffer.new(size)
+    assert_equal buffer.size, size
+  end
+
   def test_tone
     PortAudio.init
     stream = PortAudio::Stream.new
@@ -24,7 +30,7 @@ class PortAudioTest < Test::Unit::TestCase
 
     stream.close
 
-    print "Did you hear a sine wave? [ y / n ] "
+    print "\nDid you hear a sine wave? [ y / n ] "
     answer = gets
     assert_equal answer.strip, 'y'
   end

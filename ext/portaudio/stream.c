@@ -26,7 +26,7 @@ static VALUE stream_init(VALUE self)
 
 static VALUE stream_write(VALUE self, VALUE buffer)
 {
-    PaError err = Pa_WriteStream(stream, get_samples(buffer), DEFAULT_BUFFER_SIZE);
+    PaError err = Pa_WriteStream(stream, get_samples(buffer), get_buffer_size(buffer));
     raise_if_error(err, ERROR_WRITING_STREAM);
 
     return Qtrue;
